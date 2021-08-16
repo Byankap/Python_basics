@@ -77,4 +77,21 @@ type()
             continue
 
 #review
+    #loops are useful for executing a command over a large # of items
+    for letter in 'abc':
+        print(letter.upper())
+    #output
+    ABC (vertically)
+    #the name after for (letter) is just a variable name
 
+#looping over dictionary keys:
+        phone_number = {'Marry': +1234567,'Allen'}
+        for value in phone_number.keys():
+            print(value)
+        #output: Marry and Allen
+        #same cam be done for values and items 
+
+#while loops
+    #will continue to run as long as a condition is true
+    while datetime.datetime.now() < datetime.datetime(2090)
+        print('It not yet 19:30:20 of 2090.8.20')
