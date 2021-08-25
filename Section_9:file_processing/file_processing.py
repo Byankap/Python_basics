@@ -91,8 +91,44 @@
     # character meaning
     #     'r' reading
     #     'w' writing, truncating the file first
-    #     'x' create a new file and open it for writing
+    #     'x' create a new file and open it for writing (but it will not overwrite an existing file)
     #     'a' open for writing, appending to the end of the file 
         # '+' open a disk file for updating (reading and writing)
 
 #Appending text to an existing file 
+    with open('files/fruits.txt', 'a') as myfile:
+        myfile.write('\nOkra')
+    #it will add Okra to the list, next line
+
+#for reading and appending
+    with open('files/fruits.txt', 'a+') as myfile:
+        myfile.write('\nOkra')
+        myfile.seek(0) #to put the cursor back at the begining of the list
+        content = myfile.read() 
+    print(content)
+
+#excersice
+    #append text of one file to another
+    with open("bear1.txt") as file:
+        content = file.read()
+
+    with open("bear2.txt", "a") as file:
+        file.write(content)
+    
+    #or
+    bear1 = open('bear1.txt', 'r')
+    bear2 = open('bear2.txt', 'a+')
+
+    bear2.write(bear1.read())
+
+    bear2.seek(0)
+
+#excersice
+    #you have a file and you want to add the content twice
+    with open("data.txt", 'a+') as file:
+    file.seek(0) #Idk know when the cursor needs to start at the begining, so confused 
+    content = file.read()
+    file.seek(0)
+    file.write(content)
+    file.write(content)
+
