@@ -17,12 +17,23 @@ def translate(word):
         yn = input("Did you mean %s instead? Enter Y if yes, or N if no: " % get_close_matches(word, data.keys())[0])
         #a string format and get the first element of a list
         #the users response gets stored in a variable 
-        if yn == "Y":
+        if yn.lower() == "y":
             return data[get_close_matches(word, data.keys())[0]]
+        elif yn.lower() == "n":
+            return "The words does not exist."
+        else:
+            return "We do not understand your input"
     else:
         return "the word does not exist"
 
 word = input('Enter word: ')
+#print out each definitions seperately by line. 
+#first create a variable then a function to print items out seperately 
+output = (translate(word)) 
 
-print(translate(word)) 
+if type(output) == list:
+    for item in output:
+        print(item)
+else:
+    print(output)
 
