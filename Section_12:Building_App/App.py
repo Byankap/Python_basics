@@ -36,13 +36,16 @@ else:
     print('No word found, sorry')
 
 #implemented code from section 11, get_close_matches
-def dictionary (word):
-    if result in results:
-        print(result[1])
-    
-    elif len(get_close_matches(word, data.keys())) > 0
-        yn = input("Did you mean %s instead? Enter Y if yes, or N if no" %s word)
-        if yn.lower() =='y':
-            return data[get_close_matches(word,data.keys())[0]]
-        elif yn.lower() =='n':
-            return ''
+# def translate(word):
+#     if word in results:
+#             print(result[1])
+        
+#     elif len(get_close_matches(word, results.())) > 0:
+#         yn = input("Did you mean %s instead? Enter Y if yes, or N if no" % word)
+#         if yn.lower() =='y':
+#             return results[get_close_matches(word,results.keys())[0]]
+#         elif yn.lower() =='n':
+#             return 'Oh well'
+#     else:
+#         print('No word found, sorry')
+# translate(f'{word}')
