@@ -12,4 +12,4 @@ while True:
         print("Working hours")
     else:
         print("Fun hours")
-    time.sleep(5)
+    time.sleep(3)
